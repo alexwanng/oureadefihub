@@ -5,6 +5,16 @@ layout: default
   {% include mathjax.html %}
 {% endif %}
 
+{% if post %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{post.title}}">
+  <meta property="og:description" content="{{post.title}}">
+  <meta property="og:image" content="{{"/assets/images/defihub.png"}}">
+  <meta property="og:url" content="{{post.url}}">
+
+{% endif %}
+
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
