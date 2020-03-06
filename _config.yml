@@ -34,7 +34,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-paginate: 10
+paginate: 20
 excerpt_separator: "\n\n"
 paginate_path: "page:num"
 

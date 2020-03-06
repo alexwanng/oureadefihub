@@ -49,7 +49,7 @@ comments: false
 
                       
                     </h3>
-                    
+
                     <div class="post-content" itemprop="articleBody">
                         {{ post.content }}
                     </div>
@@ -58,12 +58,6 @@ comments: false
                         <span class="meta-info">
                           <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y-%m-%d" }}
                         </span>
-                        {% for cat in post.categories %}
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-                        </span>
-                        {% endfor %}
                     </p>
                 </li>
                 {% endfor %}
