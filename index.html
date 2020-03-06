@@ -41,12 +41,7 @@ comments: false
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
 
-                      {% if post.origin_url  %}
-                       <a href="{{ post.origin_url }}">{{ post.title }}</a>
-                      {% else %}
-                       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                    {% endif %}
-
+                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                       
                     </h3>
 
@@ -57,7 +52,12 @@ comments: false
                     <p class="repo-list-meta">
                         <span class="meta-info">
                           <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y-%m-%d" }}
-                        </span>
+                        </span> 
+                        {% if post.origin_url  %}  
+                       来源： <a href="{{ post.origin_url }}">{{ post.title }}</a>
+                      {% else %}
+                       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    {% endif %}
                     </p>
                 </li>
                 {% endfor %}
